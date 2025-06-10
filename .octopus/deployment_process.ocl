@@ -8,7 +8,7 @@ step "run-a-harmless-script" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "false"
-            Octopus.Action.Script.ScriptBody = "Write-Host \"Hello World!\""
+            Octopus.Action.Script.ScriptBody = "Write-Host \"Aren't you glad I'm not doing anything bad to your systems?\""
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
