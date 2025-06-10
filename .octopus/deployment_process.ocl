@@ -1,0 +1,17 @@
+step "run-a-harmless-script" {
+    name = "Run a harmless script"
+    properties = {
+        Octopus.Action.TargetRoles = "DevOps API AS IIS"
+    }
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Script.ScriptBody = "Write-Host \"Hello World!\""
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
+        }
+        worker_pool_variable = ""
+    }
+}
